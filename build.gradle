@@ -1,28 +1,20 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.6.5'
+    id 'org.jetbrains.intellij' version '1.5.2'
 }
 
 group 'com.github.zjb-it'
-version '13.0'
-
-repositories {
-    repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        mavenLocal()
-        mavenCentral()
-    }
-}
+version '13.2'
+sourceCompatibility = 1.8
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2021.2'
-    plugins = ['java','yaml']
-
+    version = '2022.1'
+    plugins = ['java', 'yaml']
 }
 //patchPluginXml {
 //    changeNotes """
